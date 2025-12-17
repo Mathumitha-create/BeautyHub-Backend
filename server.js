@@ -14,9 +14,21 @@ connectDB();
 const app = express();
 
 const allowedOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+const allowedOrigins = [
+  allowedOrigin,
+  "http://localhost:5173",
+  "https://beauty-hub-frontend.vercel.app",
+];
 app.use(
   cors({
-    origin: allowedOrigin,
+    origin: (origin, callback) => {
+      // allow requests with no origin like mobile apps or curl
+      if (!origin) return callback(null, true);
+      const ok = allowedOrigins.includes(origin);
+      return callback(ok ? null : new Error("Not allowed by CORS"), ok);
+    },
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
@@ -33,6 +45,7 @@ app.get("/", (req, res) => {
   res.end("Server is running on port 3000");
 });
 
+// Note: CORS and JSON body parser are already applied above
 // Use routes
 app.use("/products", productRoutes);
 app.use("/cart", cartRoutes);
