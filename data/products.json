@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "Name": "Hydrating Facial Cleanser",
+    "Category": "Skincare",
+    "image": "https://i.pinimg.com/1200x/6d/99/21/6d99213331827750ece38a45957d7a9e.jpg",
+    "OriginalPrice": 999,
+    "SellingPrice": 699
+  },
+  {
+    "id": 2,
+    "Name": "Vitamin C Serum",
+    "Category": "Skincare",
+    "image": "https://i.pinimg.com/736x/11/30/39/113039d595cbd06fe0a0bd27df2c6f03.jpg",
+    "OriginalPrice": 1499,
+    "SellingPrice": 1099
+  },
+  {
+    "id": 3,
+    "Name": "SPF 50 Sunscreen",
+    "Category": "Skincare",
+    "image": "https://i.pinimg.com/1200x/9e/ee/26/9eee26605d7c5272c28aef2d1de38c2e.jpg",
+    "OriginalPrice": 1299,
+    "SellingPrice": 899
+  },
+  {
+    "id": 4,
+    "Name": "Matte Liquid Lipstick",
+    "Category": "Makeup",
+    "image": "https://i.pinimg.com/736x/76/77/4f/76774f9493c55aa852ae349ec46c6a72.jpg",
+    "OriginalPrice": 899,
+    "SellingPrice": 599
+  },
+  {
+    "id": 5,
+    "Name": "Volumizing Mascara",
+    "Category": "Makeup",
+    "image": "https://i.pinimg.com/1200x/cf/31/d4/cf31d4d87ef6848dad32496b82e4348d.jpg",
+    "OriginalPrice": 1199,
+    "SellingPrice": 849
+  },
+  {
+    "id": 6,
+    "Name": "Neutral Eyeshadow Palette",
+    "Category": "Makeup",
+    "image": "https://i.pinimg.com/1200x/86/16/7c/86167cbfeaf0d0a34093c27f456a8d2e.jpg",
+    "OriginalPrice": 1999,
+    "SellingPrice": 1499
+  },
+  {
+    "id": 7,
+    "Name": "Nourishing Hair Oil",
+    "Category": "Haircare",
+    "image": "https://i.pinimg.com/736x/e8/13/49/e8134910489768a200894d464e4e7b2c.jpg",
+    "OriginalPrice": 1299,
+    "SellingPrice": 949
+  },
+  {
+    "id": 8,
+    "Name": "Repair Shampoo",
+    "Category": "Haircare",
+    "image": "https://i.pinimg.com/1200x/56/f6/b0/56f6b004b1fe8fd6722adcaa516c4216.jpg",
+    "OriginalPrice": 1099,
+    "SellingPrice": 799
+  },
+  {
+    "id": 9,
+    "Name": "Aloe Vera Moisturizer",
+    "Category": "Skincare",
+    "image": "https://i.pinimg.com/1200x/61/8d/16/618d16b2296acddb1068bd15820b26d0.jpg",
+    "OriginalPrice": 999,
+    "SellingPrice": 749
+  },
+  {
+    "id": 10,
+    "Name": "Rose Water Toner",
+    "Category": "Skincare",
+    "image": "https://i.pinimg.com/1200x/60/10/ca/6010caa7787c5767137bbdc461615dd5.jpg",
+    "OriginalPrice": 799,
+    "SellingPrice": 549
+  }
+]
