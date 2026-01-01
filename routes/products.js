@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     const products = await Product.find().sort({ createdAt: -1 });
-    
+
     const shaped = products.map((p) => ({
       id: p._id.toString(),
       Name: p.Name,

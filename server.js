@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const cartRoutes = require("./routes/cart");
 const productRoutes = require("./routes/products");
+const wishlistRoutes = require("./routes/wishlist");
 const orderRoutes = require("./routes/orders");
 const authRoutes = require("./routes/auth");
 const connectDB = require("./config/db");
@@ -17,6 +18,8 @@ const allowedOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
 const allowedOrigins = [
   allowedOrigin,
   "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:5175",
   "https://beauty-hub-frontend.vercel.app",
 ];
 app.use(
@@ -24,7 +27,9 @@ app.use(
     origin: (origin, callback) => {
       // allow requests with no origin like mobile apps or curl
       if (!origin) return callback(null, true);
-      const ok = allowedOrigins.includes(origin);
+      const isLocalhost = /^https?:\/\/localhost:\d+$/.test(origin);
+      const isLoopback = /^https?:\/\/127\.0\.0\.1:\d+$/.test(origin);
+      const ok = isLocalhost || isLoopback || allowedOrigins.includes(origin);
       return callback(ok ? null : new Error("Not allowed by CORS"), ok);
     },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
@@ -48,6 +53,7 @@ app.get("/", (req, res) => {
 // Note: CORS and JSON body parser are already applied above
 // Use routes
 app.use("/products", productRoutes);
+app.use("/wishlist", wishlistRoutes);
 app.use("/cart", cartRoutes);
 app.use("/orders", orderRoutes);
 app.use("/auth", authRoutes);
